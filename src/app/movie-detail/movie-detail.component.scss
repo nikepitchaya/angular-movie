@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    .content-container {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
+
+        div {
+            width: 60%;
+            height: 100%;
+            padding: 12px 6px 12px 12px;
+            p {
+                margin-bottom: 10px;
+                font-size: large;
+            }
+            .content-text{
+                width: fit-content;
+                padding: 4px;
+                border: 1px solid rgba(0, 0, 0, 0.5);
+            }
+            li{
+                margin-bottom: 1px;
+            }
+        }
+       
+        img {
+            padding: 12px 12px 12px 6px;
+            width: 40%;
+            height: 100%;
+        }
+    }
+}

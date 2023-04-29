@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="content-container" *ngFor="let item of moviesData;let i = index">
+        <div>
+            <p>Title : </p>
+            <p class="content-text">{{item.title}}</p>
+            <p>Genres : </p>
+            <p class="content-text">{{item.genres.join(", ")}}</p>
+            <p>Href : </p>
+            <p class="content-text">{{item.href}}</p>
+            <p>Release : </p>
+            <p class="content-text">{{item.year}}</p>
+            <p>Extract : </p>
+            <p class="content-text">{{item.extract}}</p>
+            <p>Cast : </p>
+            <li class="content-text" *ngFor="let item of item.cast">
+                {{item}}
+            </li>
+        </div>
+        <img #imgThumbNail src="{{item.thumbnail}}">
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="grid-container">
+    <div class="grid-item" *ngFor="let item of moviesData;let i = index">
+        <div [routerLink]="['/moviedetail']" [queryParams]="{title:item.title}">
+            <img src="{{item.thumbnail}}" />
+            <p>{{item.title}}</p>
+        </div>
+    </div>
+</div>

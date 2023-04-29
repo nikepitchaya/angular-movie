@@ -1,0 +1,16 @@
+<div class="container">
+    <p>Search movie</p>
+    <div class="container-search">
+        <input type="text" list="codes" placeholder="Search movie name" [(ngModel)]="movieName">
+        <datalist id="codes">
+            <option *ngFor="let item of jsonDataResult" [value]="item.title"></option>
+        </datalist>
+        <button (click)="searchMovie()">Search</button>
+    </div>
+    <div class="container-movie">
+        <app-movie-banner *ngIf="moviesData.length != 0 else elseTemplate" [moviesData]="moviesData"></app-movie-banner>
+        <ng-template #elseTemplate>
+            <p style="text-align: center;font-weight: lighter;">No Movie name: "{{movieName}}"</p>
+        </ng-template>
+    </div>
+</div>

@@ -1,3 +1,17 @@
 <div class="container">
-    <p>home-page works!</p>
+    <div class="container-header">
+        <div *ngFor="let item of stringHeader">
+            <span *ngIf="item !== ' ' else elseTemplate">{{item}}</span>
+            <ng-template #elseTemplate>
+                <span>&nbsp;</span>
+            </ng-template>
+        </div>
+    </div>
+    <div class="container-lorem">
+        <h3>Angular Movie 2020</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, ex eos dolore perspiciatis possimus
+            provident ipsa, amet tempora libero ad placeat? Tenetur quos fugit soluta maiores saepe deserunt quia
+            distinctio!</p>
+    </div>
+    <button routerLink="/searchmovie">Getstart</button>
 </div>
